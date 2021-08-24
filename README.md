@@ -9,7 +9,7 @@ network Bayesian in `PyTorch`.
 If you like our work, please click on a star. If you use our code in your research projects,
 please cite our paper above.
 
-# Bayesify your network
+# Bayesify your Neural Network
 
 There are 3 main files which help you to `Bayesify` your deterministic network:
 
