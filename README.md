@@ -15,8 +15,8 @@ There are 3 main files which help you to `Bayesify` your deterministic network:
 
 1. `bayes_layers.py` - file contains a bayesian implementation of convolution(1d, 2d, 3d, transpose)
 and linear layers, according to approx posterior from `Location-Scale` family, i.e. which has 2 parameters
-$$\mu$$ and $$\sigma$$. This file contains general definition, *independent* of specific distribution,
-as long as distribution contains 2 parameters $$\mu$$ and $$\sigma$$. 
+mu and sigma. This file contains general definition, *independent* of specific distribution,
+as long as distribution contains 2 parameters mu and sigma. 
 It uses forward method defined in `vi_posteriors.py` file. 
 One of the main arguments for redefined classes is `approx_post`,
 which defined which posterior class to use from `vi_posteriors.py`.
@@ -26,7 +26,7 @@ For example, if `vi_posteriors.py` contains class Gaus, then `approx_post='Gaus'
 2. `vi_posteriors.py` - file describes forward method, including kl term, for different
 approximate posterior distributions. Current implementation contains following 
 disutributions:
-- Radial
+- Radial 
 - Gaus
 
 If you would like to implement your own class of distrubtions, in `vi_posteriors.py`
