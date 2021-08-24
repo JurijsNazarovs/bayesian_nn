@@ -1,7 +1,7 @@
 We present the new scheme to compute Monte Carlo estimator in Bayesian VI 
 settings with almost no memory cost in GPU, regardles of the number of samples.
 Our method is described in the paper (UAI2021):
-"Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks".
+["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
 
 In addition, we provide an implementation framework to make your deterministic
 network Bayesian in `PyTorch`. 
