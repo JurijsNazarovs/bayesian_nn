@@ -222,8 +222,8 @@ def main():
                 split='train',
                 download=True,
                 transform=transform_train),
-                                                       **kwargs,
-                                                       shuffle=False)  # True
+                **kwargs,
+                shuffle=False)  # True
             val_loader = torch.utils.data.DataLoader(dataset_(
                 './data',
                 split='test',
@@ -345,9 +345,6 @@ def main():
             train_loader, model, optimizer, epoch)
         train_time = time.time() - start_time
         start_time = time.time()
-
-        import pdb
-        pdb.set_trace()
 
         with torch.no_grad():
             prec1, val_loss, val_batch_time = validate(val_loader, model,
@@ -527,8 +524,6 @@ def validate(val_loader, model, epoch, n_classes):
                       top1=top1))
 
     print(' * Prec@1 {top1.avg:.3f}'.format(top1=top1))
-    # import pdb
-    # pdb.set_trace()
 
     return top1.avg, losses.avg, batch_time.avg
 
