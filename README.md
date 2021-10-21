@@ -10,7 +10,7 @@ and significantly improves run time (Figure below).
 Our method is described in the paper (UAI2021):
 ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
 
-![Running time for Gradient Accumulation vs our method](images/Batch_Time_GA_comparison.png)
+![](images/Batch_Time_GA_comparison.png)
 
 In addition, we provide an implementation framework to make your deterministic
 network Bayesian in `PyTorch`. 
