@@ -35,7 +35,7 @@ For example, if `vi_posteriors.py` contains class Gaus, then `approx_post='Gaus'
 2. `vi_posteriors.py` - file describes forward method, including kl term, for different
 approximate posterior distributions. Current implementation contains following 
 disutributions:
-- Radial 
+- Radial (more stable training than Gaussian, use it if you don't have preferences)
 - Gaus
 
 If you would like to implement your own class of distrubtions, in `vi_posteriors.py`
