@@ -1,7 +1,16 @@
-We present the new scheme to compute Monte Carlo estimator in Bayesian VI 
-settings with almost no memory cost in GPU, regardles of the number of samples.
+Monte Carlo (MC) estimator is the core concept used in Bayesian Variational Inference.
+Higher number of MC samples lead to lower variance of the MC estimator and 
+higher accuracy. However, with the direct implementation of MC estimator for KL term,
+increasing number of MC sampels results in the GPU memory explosion in
+Deep Bayesian Neural Networks.
+
+We present the new scheme to compute MC estimator of KL term in Bayesian VI 
+settings with almost no memory cost in GPU, regardles of the number of samples (even 1000+),
+and significantly improves run time (Figure below). 
 Our method is described in the paper (UAI2021):
 ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
+
+![Running time for Gradient Accumulation vs our method](images/Batch_Time_GA_comparison.png)
 
 In addition, we provide an implementation framework to make your deterministic
 network Bayesian in `PyTorch`. 
