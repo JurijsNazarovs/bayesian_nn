@@ -16,7 +16,8 @@ In addition, we provide an implementation framework to make your deterministic
 network Bayesian in `PyTorch`. 
 
 If you like our work, please give us a star. If you use our code in your research projects,
-please cite our paper as\\
+please cite our paper as
+```
 @inproceedings{nazarovs2021graph,
 title={Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks},
 author={Nazarovs, Jurijs and Mehta, Ronak R and Lokhande, Vishnu Suresh and Singh, Vikas},
@@ -25,7 +26,7 @@ volume={2021},
 year={2021},
 organization={NIH Public Access}
 }
-
+```
 
 # Bayesify your Neural Network
 
