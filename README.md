@@ -144,5 +144,7 @@ all standard DNN models are located in bayesian_dnn_class/models, and are:
 - DenseNet
 - ResNet
 - VGG
-To understand the size of the networks, refer to Figure 2 (right) in the paper:
+
+To understand the size of the Bayesian Versions of the networks, 
+refer to Figure 2 (right) in the paper:
 ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
