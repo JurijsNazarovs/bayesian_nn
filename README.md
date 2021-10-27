@@ -28,15 +28,15 @@ year={2021}
 ```
 
 Note that there are 2 ways to run the Bayesian network from our project:
-    1. You can [Bayesify your own Deterministic Neural Network](#-bayesify-your-neural-network)
-    2. You can use established code for appropriate problem in section
+1. You can [Bayesify your own Deterministic Neural Network](#-bayesify-your-neural-network)
+2. You can use established code for appropriate problem in section
     [Current implementation of networks for different problems](#-current-implementation-of-networks-for-different-problems)
 
 Remember to adjust main Bayesian arguments:
-    - `--approx_post`: Approximate posterior: Gaus, Radial (use Radial, if you do not have preferences)
-    - `--kl_method`: method to compute KL: repar (use this one always), direct, closed
-    - `--n_mc_iter`: number of mc iterations to approximate kl (higher number => less variance, but larger run time. Usually use 100)
-    - `--n_test_iter`: number of test iterations to estimate uncertainty. 
+* `--approx_post`: Approximate posterior: Gaus, Radial (use Radial, if you do not have preferences)
+* `--kl_method`: method to compute KL: repar (use this one always), direct, closed
+* `--n_mc_iter`: number of mc iterations to approximate kl (higher number => less variance, but larger run time. Usually use 100)
+* `--n_test_iter`: number of test iterations to estimate uncertainty. 
       Used in testing script, to compute statistics, like mean/std of samples
       from posterior distribution and credible intervals.
 
