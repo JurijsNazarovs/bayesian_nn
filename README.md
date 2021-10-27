@@ -28,9 +28,9 @@ year={2021}
 ```
 
 Note that there are 2 ways to run the Bayesian network from our project:
-1. You can [Bayesify your own Deterministic Neural Network](#-bayesify-your-neural-network)
+1. You can [Bayesify your own Deterministic Neural Network](#bayesify-your-neural-network)
 2. You can use established code for appropriate problem in section
-    [Current implementation of networks for different problems](#-current-implementation-of-networks-for-different-problems)
+    [Current implementation of networks for different problems](#current-implementation-of-networks-for-different-problems)
 
 Remember to adjust main Bayesian arguments:
 * `--approx_post`: Approximate posterior: Gaus, Radial (use Radial, if you do not have preferences)
