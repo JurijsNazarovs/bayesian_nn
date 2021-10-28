@@ -27,10 +27,15 @@ year={2021}
 }
 ```
 
-Note that there are 2 ways to run the Bayesian network from our project:
-1. You can [Bayesify your own Deterministic Neural Network](#bayesify-your-neural-network)
-2. You can use established code for appropriate problem in section
+*Note* that there are 2 ways to run the Bayesian network from our project:
+1. You can use established code for appropriate problem in section
     [Current implementation of networks for different problems](#current-implementation-of-networks-for-different-problems)
+2. In case we do not have an appropriate network for you,
+   you can [Bayesify your own Deterministic Neural Network](#bayesify-your-neural-network)
+
+*Note* that Bayesian neural network usually has double number of parameters, compare to determenistic version. That is,
+if for example determenistic ResNet-18 can fit in your RAM/GPU memory, it does not guarantee that
+Bayesian version of it fits as well. Then you would need to create your own BNN.
 
 Remember to adjust main Bayesian arguments:
 * `--approx_post`: Approximate posterior: Gaus, Radial (use Radial, if you do not have preferences)
