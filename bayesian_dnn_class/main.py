@@ -229,8 +229,8 @@ def main():
                 split='test',
                 download=True,
                 transform=transform_test),
-                                                     **kwargs,
-                                                     shuffle=False)
+                **kwargs,
+                shuffle=False)
         else:
             train_loader = torch.utils.data.DataLoader(
                 dataset_('./data',
@@ -241,8 +241,8 @@ def main():
                 shuffle=False)  # True
             val_loader = torch.utils.data.DataLoader(dataset_(
                 './data', train=False, transform=transform_test),
-                                                     **kwargs,
-                                                     shuffle=False)
+                **kwargs,
+                shuffle=False)
 
     if args.dataset == "mnist":
         in_channels = 1
@@ -289,7 +289,8 @@ def main():
         model.to(args.devices)
         cudnn.benchmark = True
 
-    print(str(sum(p.numel() for p in model.parameters() if p.requires_grad)))
+    print("Number of trainable parameters in the Bayesian model %s: %d" %
+          (args.net, sum(p.numel() for p in model.parameters() if p.requires_grad)))
 
     # Summary of model
     model_summary = vi.Utils.get_summary(model)
@@ -349,7 +350,7 @@ def main():
         with torch.no_grad():
             prec1, val_loss, val_batch_time = validate(val_loader, model,
                                                        epoch, n_classes)
-        #prec1, val_loss, val_batch_time = 1, 1, 1
+        # prec1, val_loss, val_batch_time = 1, 1, 1
         val_time = time.time() - start_time
 
         print(
@@ -396,6 +397,9 @@ def main():
 
 
 def train(train_loader, model, optimizer, epoch):
+    print("-------------------------")
+    print("Start training")
+    print("-------------------------")
     model.train()
 
     batch_time = AverageMeter()
@@ -461,6 +465,10 @@ def train(train_loader, model, optimizer, epoch):
 
 
 def validate(val_loader, model, epoch, n_classes):
+    print("-------------------------")
+    print("Start validation")
+    print("-------------------------")
+
     batch_time = AverageMeter()
     losses = AverageMeter()
     top1 = AverageMeter()
@@ -541,6 +549,7 @@ def save_checkpoint(state, is_best, filename='checkpoint.pth.tar'):
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
+
     def __init__(self):
         self.reset()
 
@@ -594,7 +603,7 @@ def get_gpu_memory_map(device_ids=None):
         'nvidia-smi', '--query-gpu=memory.used',
         '--format=csv,nounits,noheader'
     ],
-                                     encoding='utf-8')
+        encoding='utf-8')
 
     # Convert lines into a dictionary
     gpu_memory = [int(x) for x in result.strip().split('\n')]
