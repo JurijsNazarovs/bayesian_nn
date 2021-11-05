@@ -5,12 +5,16 @@ increasing number of MC sampels results in the GPU memory explosion in
 Deep Bayesian Neural Networks.
 
 We present the new scheme to compute MC estimator of KL term in Bayesian VI 
-settings with almost no memory cost in GPU, regardles of the number of samples (even 1000+),
+settings with almost no memory cost in GPU, regardless of the number of samples (even 1000+),
 and significantly improves run time (Figure below). 
 Our method is described in the paper (UAI2021):
 ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
 
 ![](images/Batch_Time_GA_comparison.png "Running time for Gradient Accumulation vs our method" )
+
+The main idea of our method is to reparameterize MC expression to avoid computation graph explosion.
+![MC reparameterization to avoid explosion of Computation Graph](images/graph.gif)    
+
 
 In addition, we provide an implementation framework to make your deterministic
 network Bayesian in `PyTorch`. 
