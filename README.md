@@ -1,3 +1,5 @@
+Official repository of the paper (UAI 2021) ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
+
 Monte Carlo (MC) estimator is the core concept used in Bayesian Variational Inference.
 Higher number of MC samples lead to lower variance of the MC estimator and 
 higher accuracy. However, with the direct implementation of MC estimator for KL term,
@@ -7,8 +9,6 @@ Deep Bayesian Neural Networks.
 We present the new scheme to compute MC estimator of KL term in Bayesian VI 
 settings with almost no memory cost in GPU, regardless of the number of samples (even 1000+),
 and significantly improves run time (Figure below). 
-Our method is described in the paper (UAI2021):
-["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
 
 ![](images/Batch_Time_GA_comparison.png "Running time for Gradient Accumulation vs our method" )
 
