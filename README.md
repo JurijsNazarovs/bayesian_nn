@@ -1,5 +1,7 @@
 Official repository of the paper (UAI 2021) ["Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"](paper.pdf).
 
+Video presentation: [youtube](https://www.youtube.com/watch?v=Vg5La64V9Bs)
+
 Monte Carlo (MC) estimator is the core concept used in Bayesian Variational Inference.
 Higher number of MC samples lead to lower variance of the MC estimator and 
 higher accuracy. However, with the direct implementation of MC estimator for KL term,
